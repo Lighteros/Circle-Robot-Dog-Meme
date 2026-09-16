@@ -1,0 +1,12 @@
+.vercel
+.DS_Store
+Thumbs.db
+node_modules
+*.log
+.env
+.env.*
+.env*
+
+/logo.png
+/banner.png
+/Circle_*.mp4

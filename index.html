@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bits | Circle Robot Dog on Arc</title>
+  <meta name="description" content="Circle Robot Dog, ticker Bits, on Arc. Watch Bits complete real machine-to-machine USDC nanopayments to recharge itself." />
+  <meta property="og:title" content="Bits | Circle Robot Dog" />
+  <meta property="og:description" content="OpenMind's robot dog, live on Arc. Machine-to-machine USDC nanopayments." />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta name="theme-color" content="#08090d" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="arc-mark" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+
+  <header class="nav">
+    <a class="nav-brand" href="#hero">
+      <span class="nav-mark">
+        <img src="assets/logo.png" alt="" />
+      </span>
+      <span class="nav-word">
+        <strong>Bits</strong>
+        <small>Circle Robot Dog</small>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#howtobuy">How to buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#joinus">Join us</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn" data-link="x" href="https://x.com/BitsRobotDog" target="_blank" rel="noopener noreferrer" aria-label="Bits on X">
+        <img src="assets/icons/x.svg" alt="" />
+      </a>
+      <a class="icon-btn" data-link="dex" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer" aria-label="DexScreener on Arc">
+        <img src="assets/icons/dexscreener.svg" alt="" />
+      </a>
+      <a class="btn btn-cyan" data-link="uni" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+        <img src="assets/icons/uniswap.svg" alt="" />
+        Buy Bits
+      </a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="nav-sheet">
+    <a href="#about">About</a>
+    <a href="#howtobuy">How to buy</a>
+    <a href="#chart">Chart</a>
+    <a href="#joinus">Join us</a>
+  </div>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-stage">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/logo.png">
+          <source src="assets/bits.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-shade"></div>
+        <div class="hero-scan"></div>
+        <div class="letterbox top"></div>
+        <div class="letterbox bot"></div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="kicker">
+            <span class="pulse"></span>
+            Live on Arc
+            <span class="kicker-rule"></span>
+            Machine commerce
+          </p>
+          <h1>
+            <span class="hero-name">Bits</span>
+            <span class="hero-sub">Circle Robot Dog</span>
+          </h1>
+          <p class="lede">
+            Watch Bits, OpenMind's robot dog, use USDC and Circle's agentic commerce rails
+            to complete real machine-to-machine nanopayments and recharge itself.
+          </p>
+          <div class="ca-bay">
+            <span class="ca-label">Arc contract</span>
+            <button class="ca-row" type="button" data-copy="" aria-label="Copy contract address">
+              <code data-ca>Contract pending on Arc</code>
+              <span class="ca-copy">Copy</span>
+            </button>
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn-cyan btn-lg" data-link="uni" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/uniswap.svg" alt="" />
+              Swap on Uniswap
+            </a>
+            <a class="btn btn-ghost btn-lg" data-link="dex" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/dexscreener.svg" alt="" />
+              Open chart
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-plinth reveal delay">
+          <div class="plinth-ring"></div>
+          <div class="plinth-card">
+            <img class="plinth-photo" src="assets/logo.png" alt="Bits, the OpenMind robot dog, standing in front of the Circle mark" />
+            <div class="plinth-hud">
+              <span>OM1 / FABRIC</span>
+              <span class="eyes">LED 02</span>
+            </div>
+          </div>
+          <div class="charge-track" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i>
+            <b class="usdc-chip">
+              <img src="assets/icons/usdc.svg" alt="" />
+            </b>
+          </div>
+          <p class="plinth-cap">Autonomous recharge bay</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-head reveal">
+        <p class="kicker">Narrative</p>
+        <h2>A dog that pays its own way</h2>
+      </div>
+
+      <div class="about-layout">
+        <article class="about-story reveal">
+          <p>
+            Bits is not a cartoon. It is OpenMind's quadruped, running OM1, carrying a
+            FABRIC identity, and settling in USDC. When the pack needs power, the
+            machine does not wait for a human. It opens a nanopayment, reaches a charger,
+            and tops itself up.
+          </p>
+          <p>
+            Circle Robot Dog brings that moment on-chain as a memecoin on Arc.
+            The ticker is <strong>Bits</strong>. The rail is USDC. The point is simple:
+            machines can already transact with machines.
+          </p>
+          <ul class="telemetry">
+            <li>
+              <span>Unit</span>
+              <strong>Bits</strong>
+            </li>
+            <li>
+              <span>Chain</span>
+              <strong>Arc</strong>
+            </li>
+            <li>
+              <span>Rail</span>
+              <strong>USDC</strong>
+            </li>
+            <li>
+              <span>Act</span>
+              <strong>Nanopay</strong>
+            </li>
+          </ul>
+        </article>
+
+        <figure class="tweet-bay reveal delay">
+          <figcaption>
+            <img src="assets/icons/x.svg" alt="" />
+            Circle, on the record
+          </figcaption>
+          <blockquote class="twitter-tweet" data-theme="dark" data-conversation="none" data-dnt="true">
+            <p>
+              Watch Bits, OpenMind's robot dog, use USDC and our new agentic commerce
+              solution to complete real machine-to-machine nanopayments to recharge itself.
+            </p>
+            <a href="https://x.com/circle/status/2023759340079927315">February 17, 2026</a>
+          </blockquote>
+        </figure>
+      </div>
+    </section>
+
+    <section id="howtobuy" class="howto">
+      <div class="section-head reveal">
+        <p class="kicker">Protocol</p>
+        <h2>How to buy Bits</h2>
+        <p class="section-lead">Four moves. Same path the charger uses, minus the battery.</p>
+      </div>
+
+      <ol class="rail">
+        <li class="rail-step reveal">
+          <span class="rail-num">01</span>
+          <h3>Set Arc</h3>
+          <p>Open a wallet that speaks EVM and switch the network to Arc.</p>
+        </li>
+        <li class="rail-step reveal">
+          <span class="rail-num">02</span>
+          <h3>Fund USDC</h3>
+          <p>Hold USDC on Arc. That is the same dollar Bits spends at the wall.</p>
+        </li>
+        <li class="rail-step reveal">
+          <span class="rail-num">03</span>
+          <h3>Swap on Uniswap</h3>
+          <p>Route USDC into Bits on Uniswap. Confirm the Arc contract before you sign.</p>
+          <a class="text-link" data-link="uni" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/uniswap.svg" alt="" />
+            app.uniswap.org
+          </a>
+        </li>
+        <li class="rail-step reveal">
+          <span class="rail-num">04</span>
+          <h3>Read the tape</h3>
+          <p>Verify the pair on DexScreener. Arc links only. No other chain.</p>
+          <a class="text-link" data-link="dex" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+            <img src="assets/icons/dexscreener.svg" alt="" />
+            dexscreener.com/arc
+          </a>
+        </li>
+      </ol>
+
+      <div class="howto-ca reveal">
+        <button class="ca-row" type="button" data-copy="" aria-label="Copy contract address">
+          <span>Paste this contract</span>
+          <code data-ca>Contract pending on Arc</code>
+          <span class="ca-copy">Copy</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="chart" class="chart">
+      <div class="section-head reveal">
+        <p class="kicker">Telemetry</p>
+        <h2>Arc chart</h2>
+        <a class="text-link" data-link="dex" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+          <img src="assets/icons/dexscreener.svg" alt="" />
+          Open Bits on DexScreener
+        </a>
+      </div>
+      <div class="chart-bezel reveal">
+        <div class="bezel-bar">
+          <span>DexScreener</span>
+          <span>Arc</span>
+          <span>Bits / USDC</span>
+        </div>
+        <iframe
+          id="dex-frame"
+          title="Bits DexScreener chart on Arc"
+          src="https://dexscreener.com/arc?embed=1&theme=dark&info=0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="joinus" class="join">
+      <div class="section-head reveal">
+        <p class="kicker">Signal</p>
+        <h2>Join us</h2>
+      </div>
+      <a class="billboard reveal" href="https://x.com/BitsRobotDog" target="_blank" rel="noopener noreferrer">
+        <img src="assets/banner.png" alt="Bits Circle Robot Dog banner" />
+        <div class="billboard-veil"></div>
+        <div class="billboard-cta">
+          <span>Follow the pack</span>
+          <strong>@BitsRobotDog</strong>
+          <em>
+            <img src="assets/icons/x.svg" alt="" />
+            Open on X
+          </em>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="foot-brand">
+      <img src="assets/logo.png" alt="" />
+      <div>
+        <strong>Bits</strong>
+        <small>Circle Robot Dog on Arc</small>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="https://x.com/BitsRobotDog" target="_blank" rel="noopener noreferrer">
+        <img src="assets/icons/x.svg" alt="" /> X
+      </a>
+      <a data-link="dex" href="https://dexscreener.com/arc" target="_blank" rel="noopener noreferrer">
+        <img src="assets/icons/dexscreener.svg" alt="" /> DexScreener
+      </a>
+      <a data-link="uni" href="https://app.uniswap.org/swap?chain=arc" target="_blank" rel="noopener noreferrer">
+        <img src="assets/icons/uniswap.svg" alt="" /> Uniswap
+      </a>
+      <a data-link="scan" href="https://explorer.arc.io" target="_blank" rel="noopener noreferrer">
+        <img src="assets/icons/blockscout.svg" alt="" /> Arc explorer
+      </a>
+    </div>
+    <p class="foot-note">
+      Bits is a community memecoin on Arc. Nothing here is financial advice.
+      The robot in the film is OpenMind's Bits, using Circle USDC for machine payments.
+    </p>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
