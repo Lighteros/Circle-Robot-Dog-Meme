@@ -2,24 +2,28 @@ const SITE = {
   name: "Circle Robot Dog",
   symbol: "Bits",
   chain: "arc",
-  ca: "0xc707dd25d22035faee587365aa0ed42f23279941",
-  pair: "0xc9d052537aaba01b23a98566e19de689a139324273370e67ebfc9265aca7a204",
+  ca: "xxx",
+  pair: "",
   x: "https://x.com/BitsRobotDog",
   explorer: "https://explorer.arc.io",
   dexBase: "https://dexscreener.com/arc",
   uniBase: "https://app.uniswap.org/swap?chain=arc",
 };
 
+function hasLiveCa() {
+  return /^0x[a-fA-F0-9]{40}$/.test(SITE.ca);
+}
+
 function dexUrl() {
   return SITE.pair ? `${SITE.dexBase}/${SITE.pair}` : SITE.dexBase;
 }
 
 function uniUrl() {
-  return SITE.ca ? `${SITE.uniBase}&outputCurrency=${SITE.ca}` : SITE.uniBase;
+  return hasLiveCa() ? `${SITE.uniBase}&outputCurrency=${SITE.ca}` : SITE.uniBase;
 }
 
 function scanUrl() {
-  return SITE.ca ? `${SITE.explorer}/address/${SITE.ca}` : SITE.explorer;
+  return hasLiveCa() ? `${SITE.explorer}/address/${SITE.ca}` : SITE.explorer;
 }
 
 function wireLinks() {
